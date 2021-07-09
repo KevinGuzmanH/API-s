@@ -8,11 +8,13 @@ import { isPlatformBrowser, isPlatformServer} from "@angular/common";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  showmenu!: boolean;
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)){}
+
   }
 
 }
