@@ -19,6 +19,8 @@ import {CardModule} from 'primeng/card';
 import {KnobModule} from 'primeng/knob';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {AvatarModule} from 'primeng/avatar';
+import {DividerModule} from 'primeng/divider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,7 @@ import {AvatarModule} from 'primeng/avatar';
     MenubarModule,
     CardModule,
     KnobModule,
+    DividerModule,
     AvatarModule,
     AutocompleteLibModule,
     ProgressSpinnerModule,

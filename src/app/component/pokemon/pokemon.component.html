@@ -5,10 +5,10 @@
       <p id="paragraph">La API de pokemon contiene información sobre muchisimos pokemons también contiene
         datos de sus habilidades, movimientos, huevos y muchas cosas adicionales. No solo contiene datos
         del famoso pikachu, hay serca de los más de 900 pokemons existentes en la serie, pero para que hablar</p>
-        <div class="text-center mb-2">¡Usa alguna de sus funcionalidades!</div>
+        <div *ngIf="option==0" class="text-center mb-2">¡Usa alguna de sus funcionalidades!</div>
     </div>
     <div class="row" *ngIf="option==0">
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-lg-0 mb-3">
         <p-card (click)="getPokemons()" header="Buscar Información Pokémon" subheader="Busca Datos de Tu Pokémon Favorito" [style]="{width: '360px'}" styleClass="p-card-shadow">
           <ng-template pTemplate="header">
             <img  alt="Card" src="https://dondeycuanto.com/wp-content/uploads/2016/08/cuantos-pokemon-hay-en-total.jpg">
@@ -16,7 +16,7 @@
         </p-card>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-lg-0 mb-3">
         <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
           <ng-template pTemplate="header">
             <img alt="Card" src="https://dondeycuanto.com/wp-content/uploads/2016/08/cuantos-pokemon-hay-en-total.jpg">
@@ -24,12 +24,11 @@
         </p-card>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 mb-lg-0 mb-3">
         <p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
           <ng-template pTemplate="header">
             <img alt="Card" src="https://dondeycuanto.com/wp-content/uploads/2016/08/cuantos-pokemon-hay-en-total.jpg">
           </ng-template>
-          <p-knob [min]="-100" [max]="value"></p-knob>
         </p-card>
       </div>
     </div>
@@ -45,18 +44,32 @@
     </ng-template>
     <ng-template [ngIf]="option==4">
       <div class="text-center card">
+        <div id="pokemonName" class="fs-2">{{pokemonname}}</div>
         <img class="mt-1" src="{{pokemonIMG}}">
+        <p-divider align="center" type="dashed">
+          <b>Información</b>
+        </p-divider>
         <div class="row">
-          <div class="col-lg-6 col-6">
-            <span>Abilidades</span>
-            <div *ngFor="let ab of pokemonAb">
-              {{ab}}
+          <div class="col-lg-6 col-4">
+            <div class="mt-lg-3"><strong>Abilidades</strong></div>
+            <div>
+              <ul>
+                <li class="p-1" *ngFor="let ab of pokemonAb">
+                  {{ab}}
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-lg-6 col-6">
-            <span>Abilidades</span>
-            <div *ngFor="let ab of pokemonAb">
-              {{ab}}
+          <div class="col-lg-2 col-4">
+            <div>
+              <span><strong>Daño Base</strong></span>
+              <p-knob [(ngModel)]="pokemonDG" [strokeWidth]="5"></p-knob>
+            </div>
+          </div>
+          <div class="col-lg-3 col-4">
+            <div>
+              <span><strong>Vida Base</strong></span>
+              <p-knob [(ngModel)]="pokemonHP" [strokeWidth]="5"></p-knob>
             </div>
           </div>
         </div>

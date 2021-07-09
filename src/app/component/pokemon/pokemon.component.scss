@@ -8,6 +8,27 @@
 p-card{
   cursor: pointer;
 }
+
 img{
   height: 150px;
+}
+#pokemonName{
+  text-transform: capitalize;
+}
+li{
+  width: fit-content;
+}
+ul{
+  text-align: -webkit-center;
+}
+@media only screen and (max-width: 600px){
+  #pokemonSection{
+    background-position-x: right;
+  }
+  li{
+    width: max-content;
+  }
+  .row{
+    margin: 0 -19px;
+  }
 }
