@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
+import { NationalizComponent } from './component/nationaliz/nationaliz.component';
 //primeng library
 import { SidebarModule } from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
@@ -20,14 +21,16 @@ import {KnobModule} from 'primeng/knob';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {AvatarModule} from 'primeng/avatar';
 import {DividerModule} from 'primeng/divider';
-
+import {InputTextModule} from 'primeng/inputtext';
+import {ToastModule} from 'primeng/toast';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SidebarCComponent,
     PokemonComponent,
-    CoinMarketCapComponent
+    CoinMarketCapComponent,
+    NationalizComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -38,8 +41,10 @@ import {DividerModule} from 'primeng/divider';
     MenubarModule,
     CardModule,
     KnobModule,
+    InputTextModule,
     DividerModule,
     AvatarModule,
+    ToastModule,
     AutocompleteLibModule,
     ProgressSpinnerModule,
     FormsModule,

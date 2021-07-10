@@ -18,4 +18,7 @@ export class ApiserviceService {
   getPokemon(nombrePokemon: string): Observable<any>{
     return this.http.get(this.URL + '/pokemon/'+nombrePokemon)
   }
+  getCountries(nombre: string): Observable<any>{
+    return this.http.get(this.URL + '/nationalize/' + nombre);
+  }
 }

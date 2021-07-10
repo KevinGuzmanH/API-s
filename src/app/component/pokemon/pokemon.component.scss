@@ -23,9 +23,15 @@ ul{
 }
 @media only screen and (max-width: 600px){
   #pokemonSection{
-    background-position-x: right;
+    background-position: right;
+    height: 148vh;
   }
   li{
     width: max-content;
+  }
+}
+@media only screen and (min-width: 601px){
+  #pokemonSection{
+    height: 100vh;
   }
 }
