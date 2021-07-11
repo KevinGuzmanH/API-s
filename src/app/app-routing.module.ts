@@ -4,12 +4,14 @@ import {HomeComponent} from "./component/home/home.component";
 import {PokemonComponent} from "./component/pokemon/pokemon.component";
 import {CoinMarketCapComponent} from "./component/coin-market-cap/coin-market-cap.component";
 import {NationalizComponent} from "./component/nationaliz/nationaliz.component";
+import {AgifyComponent} from "./component/agify/agify.component";
 
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
   {path: 'api/pokemon', component: PokemonComponent},
   {path: 'api/coinMarketCap', component: CoinMarketCapComponent},
   {path: 'api/nationaliz', component: NationalizComponent},
+  {path: 'api/agify', component: AgifyComponent},
   {path: '**',redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

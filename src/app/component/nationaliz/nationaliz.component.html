@@ -12,7 +12,7 @@
       <span class="p-input-icon-right">
         <i *ngIf="cargando" class="pi pi-spin pi-spinner"></i>
         <input type="text" pInputText [(ngModel)]="nombre" placeholder="Escribe tu nombre">
-        <div (click)="getCountries()" class="btn"><i class="pi pi-search" style="color: crimson"></i></div>
+        <div (click)="getCountries()" id="btnSeach" class="btn"><i class="pi pi-search" style="color: crimson"></i></div>
       </span>
       <div *ngIf="mostrarResultado">
         <div class="mt-2">

@@ -23,6 +23,8 @@ import {AvatarModule} from 'primeng/avatar';
 import {DividerModule} from 'primeng/divider';
 import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
+import { AgifyComponent } from './component/agify/agify.component';
+import {MessageService} from "primeng/api";
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import {ToastModule} from 'primeng/toast';
     SidebarCComponent,
     PokemonComponent,
     CoinMarketCapComponent,
-    NationalizComponent
+    NationalizComponent,
+    AgifyComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -50,7 +53,7 @@ import {ToastModule} from 'primeng/toast';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

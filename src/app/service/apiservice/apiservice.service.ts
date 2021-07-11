@@ -21,4 +21,7 @@ export class ApiserviceService {
   getCountries(nombre: string): Observable<any>{
     return this.http.get(this.URL + '/nationalize/' + nombre);
   }
+  getOld(nombre: string): Observable<any>{
+    return this.http.get(this.URL + '/agify/' + nombre);
+  }
 }

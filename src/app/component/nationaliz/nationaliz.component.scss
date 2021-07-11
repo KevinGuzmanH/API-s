@@ -14,7 +14,9 @@
     left: 50px
   }
 }
-
+#btnSeach{
+  white-space: nowrap;
+}
 @media only screen and (max-width: 600px){
   #background{
     background-image: url("https://cdn.flipsnack.com/collections/uploads/f50a58f92195eb3f0500461f28944179_s");

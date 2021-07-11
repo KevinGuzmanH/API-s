@@ -6,7 +6,6 @@ import {MessageService} from 'primeng/api';
   selector: 'app-nationaliz',
   templateUrl: './nationaliz.component.html',
   styleUrls: ['./nationaliz.component.scss'],
-  providers: [MessageService]
 })
 export class NationalizComponent implements OnInit {
   cargando: boolean =  false;
@@ -21,7 +20,6 @@ export class NationalizComponent implements OnInit {
   }
 
   getCountries() {
-    console.log(1)
     if (this.nombre != '' && !this.nombre.includes(' ')) {
       this.error = false;
       this.cargando = true;
