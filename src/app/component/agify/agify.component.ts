@@ -17,7 +17,7 @@ export class AgifyComponent implements OnInit {
   }
 
   generarnumero(){
-      this.interbal = setInterval(this.generarnumero, 100);
+      this.interbal = window.setInterval(this.generarnumero, 100);
       let numeroAleatorio = Math.floor((Math.random() * (100 - 1 + 1)) + 1);
       let contador = <HTMLDivElement> document.querySelector("#ageTxt");
       contador.innerHTML = numeroAleatorio.toString() ;
