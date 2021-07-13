@@ -15,5 +15,6 @@ a{
 }
 #showMenu{
   margin: 10px;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
 }

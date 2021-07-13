@@ -7,7 +7,7 @@ import {message} from "../../model/message";
   providedIn: 'root'
 })
 export class ApiserviceService {
-  private URL = "http://localhost:3889/apiprovider"
+  private URL = "http://localhost:3890/apiprovider"
   constructor(private http: HttpClient) { }
 
   getPokemons(): Observable<any>{
@@ -23,5 +23,8 @@ export class ApiserviceService {
   }
   getOld(nombre: string): Observable<any>{
     return this.http.get(this.URL + '/agify/' + nombre);
+  }
+  getSearch(palabras: string[]): Observable<any>{
+    return this.http.post(this.URL + '/websearch',palabras);
   }
 }

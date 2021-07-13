@@ -25,6 +25,8 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import { AgifyComponent } from './component/agify/agify.component';
 import {MessageService} from "primeng/api";
+import { WebSearchComponent } from './component/web-search/web-search.component';
+import { WebSearchResultsComponent } from './component/web-search-results/web-search-results.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import {MessageService} from "primeng/api";
     PokemonComponent,
     CoinMarketCapComponent,
     NationalizComponent,
-    AgifyComponent
+    AgifyComponent,
+    WebSearchComponent,
+    WebSearchResultsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
