@@ -27,4 +27,7 @@ export class ApiserviceService {
   getSearch(palabras: string[]): Observable<any>{
     return this.http.post(this.URL + '/websearch',palabras);
   }
+  getliga(parametros: string[]): Observable<any>{
+    return this.http.post(this.URL + '/futbol',parametros);
+  }
 }

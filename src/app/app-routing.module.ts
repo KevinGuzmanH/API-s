@@ -7,6 +7,7 @@ import {NationalizComponent} from "./component/nationaliz/nationaliz.component";
 import {AgifyComponent} from "./component/agify/agify.component";
 import {WebSearchComponent} from "./component/web-search/web-search.component";
 import {WebSearchResultsComponent} from "./component/web-search-results/web-search-results.component";
+import {FutbolComponent} from "./component/futbol/futbol.component";
 
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
@@ -15,7 +16,7 @@ const routes: Routes = [
   {path: 'api/nationaliz', component: NationalizComponent},
   {path: 'api/agify', component: AgifyComponent},
   {path: 'api/websearch', component: WebSearchComponent},
-  {path: 'api/websearch/results', component: WebSearchResultsComponent},
+  {path: 'api/futbol', component: FutbolComponent},
   {path: '**',redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

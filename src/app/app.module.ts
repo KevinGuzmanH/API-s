@@ -12,8 +12,12 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { NationalizComponent } from './component/nationaliz/nationaliz.component';
+import { WebSearchComponent } from './component/web-search/web-search.component';
+import { WebSearchResultsComponent } from './component/web-search-results/web-search-results.component';
+import { FutbolComponent } from './component/futbol/futbol.component';
+import { AgifyComponent } from './component/agify/agify.component';
 //primeng library
-import { SidebarModule } from 'primeng/sidebar';
+import {SidebarModule} from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
 import {CardModule} from 'primeng/card';
@@ -23,10 +27,9 @@ import {AvatarModule} from 'primeng/avatar';
 import {DividerModule} from 'primeng/divider';
 import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
-import { AgifyComponent } from './component/agify/agify.component';
 import {MessageService} from "primeng/api";
-import { WebSearchComponent } from './component/web-search/web-search.component';
-import { WebSearchResultsComponent } from './component/web-search-results/web-search-results.component';
+import {TableModule} from 'primeng/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { WebSearchResultsComponent } from './component/web-search-results/web-se
     NationalizComponent,
     AgifyComponent,
     WebSearchComponent,
-    WebSearchResultsComponent
+    WebSearchResultsComponent,
+    FutbolComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -50,6 +54,7 @@ import { WebSearchResultsComponent } from './component/web-search-results/web-se
     KnobModule,
     InputTextModule,
     DividerModule,
+    TableModule,
     AvatarModule,
     ToastModule,
     AutocompleteLibModule,
