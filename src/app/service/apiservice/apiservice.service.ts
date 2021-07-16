@@ -30,4 +30,10 @@ export class ApiserviceService {
   getliga(parametros: string[]): Observable<any>{
     return this.http.post(this.URL + '/futbol',parametros);
   }
+  getArtist(name: string): Observable<any>{
+    return this.http.get(this.URL + '/deezer/' + name);
+  }
+  getTracks(artistid: string):Observable<any>{
+    return this.http.get(this.URL + '/deezer/tracks/' + artistid);
+  }
 }

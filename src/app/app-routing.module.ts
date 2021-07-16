@@ -8,7 +8,10 @@ import {AgifyComponent} from "./component/agify/agify.component";
 import {WebSearchComponent} from "./component/web-search/web-search.component";
 import {WebSearchResultsComponent} from "./component/web-search-results/web-search-results.component";
 import {FutbolComponent} from "./component/futbol/futbol.component";
+import {DeezerComponent} from "./component/deezer/deezer.component";
+import {DeezerResultsComponent} from "./component/deezer-results/deezer-results.component";
 
+// No usé lazy loading porque lo vi innecesario
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
   {path: 'api/pokemon', component: PokemonComponent},
@@ -17,6 +20,8 @@ const routes: Routes = [
   {path: 'api/agify', component: AgifyComponent},
   {path: 'api/websearch', component: WebSearchComponent},
   {path: 'api/futbol', component: FutbolComponent},
+  {path: 'api/deezer', component: DeezerComponent},
+  {path: 'api/deezer/results', component: DeezerResultsComponent},
   {path: '**',redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

@@ -16,6 +16,8 @@ import { WebSearchComponent } from './component/web-search/web-search.component'
 import { WebSearchResultsComponent } from './component/web-search-results/web-search-results.component';
 import { FutbolComponent } from './component/futbol/futbol.component';
 import { AgifyComponent } from './component/agify/agify.component';
+import { DeezerComponent } from './component/deezer/deezer.component';
+import { DeezerResultsComponent } from './component/deezer-results/deezer-results.component';
 //primeng library
 import {SidebarModule} from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
@@ -29,6 +31,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ToastModule} from 'primeng/toast';
 import {MessageService} from "primeng/api";
 import {TableModule} from 'primeng/table';
+import {PaginatorModule} from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import {TableModule} from 'primeng/table';
     AgifyComponent,
     WebSearchComponent,
     WebSearchResultsComponent,
-    FutbolComponent
+    FutbolComponent,
+    DeezerComponent,
+    DeezerResultsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -52,6 +57,7 @@ import {TableModule} from 'primeng/table';
     MenubarModule,
     CardModule,
     KnobModule,
+    PaginatorModule,
     InputTextModule,
     DividerModule,
     TableModule,
