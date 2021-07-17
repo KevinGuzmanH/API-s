@@ -7,7 +7,7 @@ import {message} from "../../model/message";
   providedIn: 'root'
 })
 export class ApiserviceService {
-  private URL = "http://localhost:3890/apiprovider"
+  private URL = "https://back-apis.herokuapp.com/apiprovider"
   constructor(private http: HttpClient) { }
 
   getPokemons(): Observable<any>{

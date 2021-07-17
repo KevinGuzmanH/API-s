@@ -1,6 +1,5 @@
 #deezerLogo{
   background-image: url("http://1000marcas.net/wp-content/uploads/2021/04/Deezer-logo.png");
-  height: 49vh;
   background-position-x: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -21,6 +20,7 @@ a{
   }
   #deezerLogo{
     background-position-y: 190px;
+    height: 42vh;
   }
 }
 @media only screen and (min-width: 601px){
@@ -30,6 +30,7 @@ a{
   }
   #deezerLogo{
     background-position-y: 90px;
+    height: 49vh;
   }
 
 }
