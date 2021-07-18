@@ -32,6 +32,7 @@ import {ToastModule} from 'primeng/toast';
 import {MessageService} from "primeng/api";
 import {TableModule} from 'primeng/table';
 import {PaginatorModule} from 'primeng/paginator';
+import {NgxChartsModule} from "@swimlane/ngx-charts";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {PaginatorModule} from 'primeng/paginator';
     BrowserAnimationsModule,
     MenubarModule,
     CardModule,
+    NgxChartsModule,
     KnobModule,
     PaginatorModule,
     InputTextModule,

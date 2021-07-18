@@ -11,7 +11,7 @@ import {FutbolComponent} from "./component/futbol/futbol.component";
 import {DeezerComponent} from "./component/deezer/deezer.component";
 import {DeezerResultsComponent} from "./component/deezer-results/deezer-results.component";
 
-// No usé lazy loading porque lo vi innecesario
+
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
   {path: 'api/pokemon', component: PokemonComponent},
@@ -22,6 +22,7 @@ const routes: Routes = [
   {path: 'api/futbol', component: FutbolComponent},
   {path: 'api/deezer', component: DeezerComponent},
   {path: 'api/deezer/results', component: DeezerResultsComponent},
+  {path: 'api/market', loadChildren: () => import('./market-m/market-m.module').then(m => m.MarketMModule)},
   {path: '**',redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

@@ -1,14 +1,41 @@
-import { Component, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-
+import {Component, Inject, OnInit} from '@angular/core';
+import * as shape from 'd3-shape';
+import { MarketServiceService} from "../../../service/market/market-service.service";
+import {NewsResponse} from "../../../model/marketNewsResponse";
+import { MessageService } from "primeng/api";
 
 @Component({
-  selector: 'app-coin-market-cap',
-  templateUrl: './coin-market-cap.component.html',
-  styleUrls: ['./coin-market-cap.component.scss']
+  selector: 'app-apple',
+  templateUrl: './apple.component.html',
+  styleUrls: ['./apple.component.scss']
 })
-export class CoinMarketCapComponent  {
+export class AppleComponent implements OnInit{
+
+  news: any[]= [];
+  news2: any[] = [];
+
+  ngOnInit() {
+    this.marketService.getNews().subscribe(
+      (data: NewsResponse) => {
+
+        if (data.status == "success"){
+          for (let i = 0; i < 10; i++) {
+            if (i<5){
+              this.news.push(data.news[i])
+            }else {
+              this.news2.push(data.news[i])
+            }
+          }
+        }else {
+          this.messageService.add({severity:'warn', summary: 'Aviso', detail: 'Error en el servidor :(',life: 4000}
+        )
+        }
+
+      }
+    )
+  }
+
+  linearCurve= shape.curveBasis;
 
   multi: any[] = [
     {
@@ -137,7 +164,6 @@ export class CoinMarketCapComponent  {
       ]
     }
   ];
-  view: [number,number] = [900, 500];
 
 
   // options
@@ -151,24 +177,25 @@ export class CoinMarketCapComponent  {
   xAxisLabel: string = 'Year';
   yAxisLabel: string = 'Population';
   timeline: boolean = true;
+  fitContainer: boolean = true;
+  autoScale: boolean = true;
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
   };
 
-  constructor() {
-    //Object.assign(this, { multi });
-  }
+  constructor(private marketService: MarketServiceService,private messageService: MessageService) { }
 
-  onSelect(data: any): void {
+  onSelect(data: any[]): void {
     console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
 
-  onActivate(data: any): void {
+  onActivate(data: any[]): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));
   }
 
-  onDeactivate(data: any): void {
+  onDeactivate(data: any[]): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
+
 }

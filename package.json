@@ -26,6 +26,7 @@
     "@angular/platform-server": "~12.1.0",
     "@angular/router": "~12.1.0",
     "@nguniversal/express-engine": "^12.1.0",
+    "@swimlane/ngx-charts": "^18.0.1",
     "angular-ng-autocomplete": "^2.0.5",
     "bootstrap": "^5.0.2",
     "express": "^4.15.2",

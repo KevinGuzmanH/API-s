@@ -36,4 +36,5 @@ export class ApiserviceService {
   getTracks(artistid: string):Observable<any>{
     return this.http.get(this.URL + '/deezer/tracks/' + artistid);
   }
+
 }

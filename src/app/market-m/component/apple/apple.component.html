@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark py-3">
+  <div class="collapse navbar-collapse container" id="navbarsExample02">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Apple</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Google</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Amazon</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="text-center mt-4">
+  <img src="https://t.ipadizate.es/2019/05/Apple-Logo-Portada.png">
+</div>
+<div class="container mt-5">
+  <h2>News</h2>
+  <div class="row p-0 m-0">
+    <div class="col-lg-6">
+      <div class="shadow mb-4" *ngFor="let post of news">
+        <p-card>
+          <h4 style="height: 6rem">{{post.title.substring(0,88)}}...</h4>
+          <span>{{post.published_date.substring(0,10)}}</span>
+          <div>
+            <a class="btn btn-outline-dark d-block" target="_blank" [href]="post.url">Ver</a>
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="shadow mb-4" *ngFor="let post of news2">
+        <p-card>
+          <h4 style="height: 6rem">{{post.title.substring(0,88)}}...</h4>
+          <span>{{post.published_date.substring(0,10)}}</span>
+          <div>
+            <a class="btn btn-outline-dark d-block" target="_blank" [href]="post.url">Ver</a>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height: 30rem;">
+<ngx-charts-line-chart
+
+  [curve]="linearCurve"
+  [scheme]="colorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [animations]="animations"
+  [xAxisLabel]="xAxisLabel"
+  [autoScale]="autoScale"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="multi"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+>
+</ngx-charts-line-chart>
+</div>
