@@ -1,42 +1,42 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import * as shape from 'd3-shape';
-import { MarketServiceService} from "../../../service/market/market-service.service";
-import { MessageService } from "primeng/api";
+import { Component, OnInit } from '@angular/core';
+import * as shape from "d3-shape";
+import {MarketServiceService} from "../../../service/market/market-service.service";
+import {MessageService} from "primeng/api";
 import {InfoResponse} from "../../../model/marketInfoResponse";
 import { multi } from "./data";
 
 @Component({
-  selector: 'app-apple',
-  templateUrl: './apple.component.html',
-  styleUrls: ['./apple.component.scss']
+  selector: 'app-google',
+  templateUrl: './google.component.html',
+  styleUrls: ['./google.component.scss']
 })
-export class AppleComponent implements OnInit{
+export class GoogleComponent implements OnInit {
 
   news: any[]= [];
   news2: any[] = [];
   conmpanyInfo!: InfoResponse;
 
   ngOnInit() {
-    this.marketService.getAppleInfo().subscribe(
-     Info => this.conmpanyInfo = Info
+    this.marketService.getGoogleInfo().subscribe(
+      Info => this.conmpanyInfo = Info
     )
-    this.marketService.getAppleNews().subscribe(
-     (data) => {
+    this.marketService.getGoogleNews().subscribe(
+      (data) => {
 
-       if (data.status == "success"){
-       for (let i = 0; i < 10; i++) {
-        if (i<5){
-         this.news.push(data.news[i])
-       }else {
-         this.news2.push(data.news[i])
-       }
-     }
-    }else {
-      this.messageService.add({severity:'warn', summary: 'Aviso', detail: 'Error en el servidor :(',life: 4000}
-    )
-    }
+        if (data.status == "success"){
+          for (let i = 0; i < 10; i++) {
+            if (i<5){
+              this.news.push(data.news[i])
+            }else {
+              this.news2.push(data.news[i])
+            }
+          }
+        }else {
+          this.messageService.add({severity:'warn', summary: 'Aviso', detail: 'Error en el servidor :(',life: 4000}
+          )
+        }
 
-    }
+      }
     )
   }
 
@@ -77,5 +77,6 @@ export class AppleComponent implements OnInit{
   onDeactivate(data: any[]): void {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
+
 
 }

@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="text-center mt-4">
-  <img src="https://t.ipadizate.es/2019/05/Apple-Logo-Portada.png">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
 </div>
 <div class="container mt-5">
   <div class="container">
@@ -8,28 +8,28 @@
   </div>
   <div id="infoDiv">
     <p-card>
-      <h2>Info</h2>
-      <div>
-        Web Site: {{conmpanyInfo.company_profile.Website}}
-      </div>
-      <div>
-        Exchage: {{conmpanyInfo.company_profile.Exchange}}
-      </div>
-      <div>
-        Industry: {{conmpanyInfo.company_profile.Industry}}
-      </div>
-      <div>
-        Sector: {{conmpanyInfo.company_profile.Sector}}
-      </div>
-      <div>
-        Full Time Employees: {{conmpanyInfo.company_profile["Full Time Employees"]}}
-      </div>
-      <div>
-        Country: {{conmpanyInfo.company_profile.Country}}
-      </div>
-      <div>
-        City: {{conmpanyInfo.company_profile.City}}
-      </div>
+    <h2>Info</h2>
+    <div>
+      Web Site: {{conmpanyInfo.company_profile.Website}}
+    </div>
+    <div>
+      Exchage: {{conmpanyInfo.company_profile.Exchange}}
+    </div>
+    <div>
+      Industry: {{conmpanyInfo.company_profile.Industry}}
+    </div>
+    <div>
+      Sector: {{conmpanyInfo.company_profile.Sector}}
+    </div>
+    <div>
+      Full Time Employees: {{conmpanyInfo.company_profile["Full Time Employees"]}}
+    </div>
+    <div>
+      Country: {{conmpanyInfo.company_profile.Country}}
+    </div>
+    <div>
+      City: {{conmpanyInfo.company_profile.City}}
+    </div>
     </p-card>
   </div>
   <h2>News</h2>
@@ -63,8 +63,7 @@
 <p-divider align="center">
   <h2 id="historical" class="p-tag">Historical value</h2>
 </p-divider>
-
-<div id="chart" style="height: 30rem;" class="container">
+<div id="chart" class="text-center" style="height: 30rem;">
   <ngx-charts-line-chart
 
     [curve]="linearCurve"
